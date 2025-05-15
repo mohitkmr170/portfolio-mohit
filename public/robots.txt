@@ -1,3 +1,9 @@
+# The robots.txt file in a React application, or any website, serves as a set of instructions for
+# web crawlers, particularly search engine bots. It informs these bots which parts of the site they
+# are allowed to access and which parts they should avoid. This file is crucial for managing
+# crawler traffic, preventing overloads on the server, and controlling which content gets indexed 
+# by search engines.
+
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
