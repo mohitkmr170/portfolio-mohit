@@ -1,0 +1,37 @@
+.intro-container {
+  display: flex;
+  margin: 20px 60px 20px 60px;
+}
+.intro-text {
+  flex: 1;
+  margin: 20px;
+}
+.intro-image {
+  display: flex;
+  flex: 1;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f5ff;
+  color: #333;
+}
+.title {
+  display: inline-block;
+  animation: wave 1.5s infinite;
+  transform-origin: 70% 70%;
+}
+.subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 2rem;
+}
+.x {
+  height: 400px;
+  width: 400px;
+  border-radius: 200px;
+}

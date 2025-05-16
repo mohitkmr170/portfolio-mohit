@@ -1,8 +1,13 @@
 import React from "react";
 import "./App.css";
+import { AppRoute } from "./Routes";
 
 function App() {
-  return <div className="App">Mohit's portfolio</div>;
+  return (
+    <div className="App">
+      <AppRoute />
+    </div>
+  );
 }
 
 export default App;
