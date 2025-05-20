@@ -17,7 +17,7 @@ export function TopNavBar() {
     return (
       <div className="notification-container">
         <Bell color="#ffffff" />
-        <h3 className="notification-text">Notification center</h3>
+        <h3 className="notification-text">Announcement banner</h3>
         <X color="#ffffff" />
       </div>
     );

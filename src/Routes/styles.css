@@ -1,5 +1,5 @@
 .app-container {
-  padding-top: 96px;
+  padding-top: 8%;
 }
 .navbar-container {
   position: fixed;
@@ -21,8 +21,7 @@
 }
 .tab-container {
   display: flex;
-  border-bottom: 1px solid #e7e7e7;
-  background-color: #ffffff;
+  background-color: #111827;
   padding: 20px;
   align-items: center;
   justify-content: center;
@@ -34,6 +33,7 @@
   align-items: center;
   font-size: 20px;
   width: 10%;
+  color: #ffffff;
 }
 .tab-inner-container {
   display: flex;
@@ -46,7 +46,7 @@
   font-size: 16px;
   line-height: 12px;
   text-decoration: none;
-  color: black;
+  color: #ffffff;
 }
 
 .tab-text:hover {
@@ -55,7 +55,7 @@
 }
 
 .active-tab {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .inactive-text {

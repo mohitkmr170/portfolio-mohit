@@ -1,15 +1,63 @@
 .intro-container {
   display: flex;
-  margin: 20px 60px 20px 60px;
+  padding: 5rem;
+  background-color: #1f2937;
+}
+.about-container {
+  padding: 1rem 5rem;
+  background-color: #111827;
+}
+.about-inner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+}
+.about-me-text {
+  text-align: center;
+}
+.xp-container {
+  background: #1f2937;
+  margin-right: 24px;
+  align-items: center;
+  padding: 24px;
+  flex: 1;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+}
+.xp-content-container {
+  margin-left: 16px;
+}
+.xp-item-container {
+  display: flex;
+  align-items: center;
+}
+.xp-content-title {
+  font-size: 20px;
+}
+.xp-content-subtitle {
+  font-size: 16px;
+  color: #9ca3af;
+}
+.xp-content-location {
+  color: #6b7280;
+}
+.whoiam-container {
+  margin-left: 24px;
+  flex: 1;
+}
+.whoami-text {
+  font-size: 16px;
+  line-height: 22px;
+  color: #d1d5db;
 }
 .intro-text {
   flex: 1;
-  margin: 20px;
 }
-.intro-image {
+.intro-image-container {
   display: flex;
   flex: 1;
-  margin: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -17,21 +65,44 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f5f5ff;
-  color: #333;
+  color: #ffffff;
 }
 .title {
-  display: inline-block;
   animation: wave 1.5s infinite;
   transform-origin: 70% 70%;
 }
 .subtitle {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #666;
-  margin-bottom: 2rem;
+  color: #9ca3af;
 }
-.x {
-  height: 400px;
-  width: 400px;
-  border-radius: 200px;
+.intro-image {
+  height: 240px;
+  width: 240px;
+  border-radius: 120px;
+}
+.phone-icon {
+  cursor: pointer;
+}
+.mail-icon {
+  cursor: pointer;
+  margin-left: 12px;
+}
+.github-icon {
+  cursor: pointer;
+  margin-left: 12px;
+}
+.linkedin-icon {
+  cursor: pointer;
+  margin-left: 12px;
+}
+.download-button {
+  cursor: pointer;
+  background-color: transparent;
+  border-color: #ffffff;
+  border-width: 1;
+  padding: 8px 12px;
+  color: #ffffff;
+  font-size: 16px;
+  margin-top: 20px;
 }
