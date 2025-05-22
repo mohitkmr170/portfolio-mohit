@@ -1,5 +1,5 @@
 // import {} from "react";
-import { AutoHScrollList } from "../../Components";
+import { AutoHScrollList, SkillsCard } from "../../Components";
 import {
   LocateIcon,
   Briefcase,
@@ -8,9 +8,13 @@ import {
   Linkedin,
   Phone,
   Mail,
+  CodeXml,
+  Settings,
+  Cloud,
 } from "lucide-react";
 import "./styles.css";
 import { personalImage } from "../../Assets";
+import { useNavigate } from "react-router";
 
 const xp = [
   {
@@ -33,7 +37,46 @@ const xp = [
   },
 ];
 
+const SKILLS = [
+  {
+    type: "Technical Skills",
+    icon: <CodeXml size={30} />,
+    skills: [
+      "React Native (Android & iOS)",
+      "React.js, Next.js",
+      "JavaScript (ES6+), TypeScript",
+      "HTML",
+      "CSS, Tailwind CSS",
+    ],
+  },
+  {
+    type: "Tools & Services",
+    icon: <Settings size={30} />,
+    skills: [
+      "Redux, MobX, Context API",
+      "Firebase, Dynatrace, Security",
+      "Git/Github, Bitbucket, Linux",
+      "Figma, AdobeXD",
+      "ESLint, TSLint, SonarLint",
+      "Performance moniroting and optimization",
+    ],
+  },
+  {
+    type: "DevOps & Backend Services",
+    icon: <Cloud size={30} />,
+    skills: [
+      "GitHub Actions, Bitrise, Fastlane",
+      "App Store & Play Store Deployments",
+      "REST APIs",
+      "GraphQL(Apollo client)",
+      "Firebase, AWS Amplify",
+    ],
+  },
+];
+
 export function Home() {
+  let navigate = useNavigate();
+
   function renderXp(item: any) {
     return (
       <div className="xp-item-container">
@@ -43,6 +86,16 @@ export function Home() {
           <p className="xp-content-subtitle">{item.subTitle}</p>
           <p className="xp-content-location">{item.location}</p>
         </div>
+      </div>
+    );
+  }
+
+  function renderSkillsCard() {
+    return (
+      <div className="cards-grid">
+        {SKILLS.map((item, index) => (
+          <SkillsCard skills={item} />
+        ))}
       </div>
     );
   }
@@ -126,6 +179,22 @@ export function Home() {
               Download Resume
             </button>
           </div>
+        </div>
+      </div>
+      <div className="skills-container">
+        <h1 className="skill-text">My Skills</h1>
+        <div className="skill-details-text">
+          I've worked with a range of technologies in the web development world,
+          from front-end to back-end.
+        </div>
+        {renderSkillsCard()}
+        <div className="show-more-cta">
+          <button
+            onClick={() => navigate("Projects")}
+            className="download-button"
+          >
+            Show more
+          </button>
         </div>
       </div>
     </>
