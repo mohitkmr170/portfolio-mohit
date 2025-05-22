@@ -1,5 +1,5 @@
 // import {} from "react";
-import { AutoHScrollList, SkillsCard } from "../../Components";
+import { AutoHScrollList, ProjectsCard, SkillsCard } from "../../Components";
 import {
   LocateIcon,
   Briefcase,
@@ -11,10 +11,12 @@ import {
   CodeXml,
   Settings,
   Cloud,
+  Hand,
 } from "lucide-react";
 import "./styles.css";
 import { personalImage } from "../../Assets";
 import { useNavigate } from "react-router";
+import { ArticlesCard } from "../../Components";
 
 const xp = [
   {
@@ -96,6 +98,26 @@ export function Home() {
         {SKILLS.map((item, index) => (
           <SkillsCard skills={item} />
         ))}
+      </div>
+    );
+  }
+
+  function renderProjectsCard() {
+    return (
+      <div className="cards-grid">
+        <ProjectsCard />
+        <ProjectsCard />
+        <ProjectsCard />
+      </div>
+    );
+  }
+
+  function renderArticles() {
+    return (
+      <div className="cards-grid">
+        <ArticlesCard />
+        <ArticlesCard />
+        <ArticlesCard />
       </div>
     );
   }
@@ -195,6 +217,87 @@ export function Home() {
           >
             Show more
           </button>
+        </div>
+      </div>
+      <div className="project-container">
+        <h1 className="skill-text">Featured Projects</h1>
+        <div className="skill-details-text">
+          Here are some of my recent works. Each project reflects my commitment
+          to clean code, modern design, and user experience.
+        </div>
+        {renderProjectsCard()}
+        <div className="show-more-cta">
+          <button
+            onClick={() => navigate("Projects")}
+            className="download-button"
+          >
+            View All Project
+          </button>
+        </div>
+      </div>
+      <div className="article-container">
+        <h1 className="skill-text">Latest Articles</h1>
+        <div className="skill-details-text">
+          I share my knowledge and experiences through writing. Here are some of
+          my recent articles on web development and design.
+        </div>
+        {renderArticles()}
+        <div className="show-more-cta">
+          <button
+            onClick={() => navigate("Projects")}
+            className="download-button"
+          >
+            View All Articles
+          </button>
+        </div>
+      </div>
+      <div className="home-footer">
+        <div className="home-footer-top-container">
+          <div>
+            <div>Let's connect</div>
+            <div
+              className="project-card-external-link-container article-read-more-container"
+              onClick={() => navigate("Contact")}
+            >
+              <div className="read-more-text">Say hi!</div>
+              <Hand />
+            </div>
+          </div>
+          <div>
+            <Phone
+              className="phone-icon"
+              onClick={() => (window.location.href = `tel:${8136085426}`)}
+            />
+            <Mail
+              className="mail-icon"
+              onClick={() =>
+                (window.location.href = "mailto:yourmail@domain.com")
+              }
+            />
+            <Github
+              className="github-icon"
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/mohitkmr170",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+            />
+            <Linkedin
+              className="linkedin-icon"
+              onClick={() =>
+                window.open(
+                  "https://github.com/mohitkmr170",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+            />
+          </div>
+        </div>
+        <div className="home-footer-bottom-container">
+          © 2025 by Mohit Kumar. All rights reserved.
         </div>
       </div>
     </>
