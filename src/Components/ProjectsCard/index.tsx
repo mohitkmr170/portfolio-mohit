@@ -38,7 +38,7 @@ export function ProjectsCard(props: any) {
           />
           <h2>{props?.project?.projectName}</h2>
         </div>
-        <h3 className="project-card-details-text">{props?.project?.details}</h3>
+        <h4 className="project-card-details-text">{props?.project?.details}</h4>
         <div className="project-card-details-text deliverabled-text">
           Key Deliverables
         </div>
