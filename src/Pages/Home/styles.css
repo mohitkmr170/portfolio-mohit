@@ -81,21 +81,6 @@ body {
   width: 240px;
   border-radius: 120px;
 }
-.phone-icon {
-  cursor: pointer;
-}
-.mail-icon {
-  cursor: pointer;
-  margin-left: 12px;
-}
-.github-icon {
-  cursor: pointer;
-  margin-left: 12px;
-}
-.linkedin-icon {
-  cursor: pointer;
-  margin-left: 12px;
-}
 .download-button {
   cursor: pointer;
   background-color: transparent;
@@ -124,6 +109,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 60px;
+  height: "auto";
+  overflow: "hidden";
 }
 .show-more-cta {
   text-align: center;

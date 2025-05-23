@@ -27,8 +27,12 @@ export function TopNavBar() {
     return (
       <div className="tab-container">
         <div className="name-container" onClick={() => navigate("/")}>
-          <img src={personalLogo} height={24} />
-          <div>Mohit Kumar</div>
+          <img
+            src={personalLogo}
+            alt={personalLogo}
+            className="tab-bar-name-logo"
+          />
+          <div className="tab-bar-name-text">Mohit Kumar</div>
         </div>
         <div className="tab-inner-container">
           {navTabs.map((tab) => {

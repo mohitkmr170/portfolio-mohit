@@ -1,0 +1,15 @@
+.phone-icon {
+  cursor: pointer;
+}
+.mail-icon {
+  cursor: pointer;
+  margin-left: 12px;
+}
+.github-icon {
+  cursor: pointer;
+  margin-left: 12px;
+}
+.linkedin-icon {
+  cursor: pointer;
+  margin-left: 12px;
+}

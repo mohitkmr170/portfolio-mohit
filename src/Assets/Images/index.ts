@@ -7,5 +7,29 @@ const html = require("./html.png");
 const css = require("./css.png");
 const jsTs = require("./jsTs.png");
 const firebase = require("./firebase.png");
+const hdfc = require("./hdfc.png");
+const darden = require("./darden.png");
+const noPreview = require("./noPreview.png");
+const khataBook = require("./khataBook.png");
+const sprive = require("./sprive.png");
+const mpl = require("./mpl.png");
+const balance = require("./balance.png");
 
-export { personalLogo, personalImage, react, reactNative, redux, html, css, jsTs, firebase };
+export {
+  personalLogo,
+  personalImage,
+  react,
+  reactNative,
+  redux,
+  html,
+  css,
+  jsTs,
+  firebase,
+  hdfc,
+  darden,
+  noPreview,
+  khataBook,
+  sprive,
+  mpl,
+  balance,
+};

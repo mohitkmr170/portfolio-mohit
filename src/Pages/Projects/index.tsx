@@ -1,5 +1,9 @@
-// import {} from "react";
+import { ProjectsSection } from "../Home/ProjectsSection";
 
 export function Projects() {
-  return <div>Projects Screen - Portfolio</div>;
+  return (
+    <div>
+      <ProjectsSection />
+    </div>
+  );
 }

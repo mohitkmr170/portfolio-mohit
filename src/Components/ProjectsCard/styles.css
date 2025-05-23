@@ -2,10 +2,12 @@
 }
 .project-card-image {
   background: #374151;
-  padding: 5rem;
   text-align: center;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
 }
 .project-card-details-container {
   padding: 24px;
@@ -16,6 +18,11 @@
 .project-card-details-text {
   color: #9ca3af;
   margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .project-card-tech-stack-container {
   display: flex;
@@ -48,4 +55,34 @@
 }
 .external-link-icon {
   margin-right: 4px;
+}
+.project-image {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+.project-image-logo {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+  margin-right: 16px;
+}
+.contribution-list-item-text {
+  color: #9ca3af;
+}
+.deliverabled-text {
+  color: #ffffff;
+}
+.timeline-role-container {
+  display: flex;
+}
+.timeline-text {
+  padding: 6px 0;
+}
+.role-container {
+  margin-left: 32px;
+}
+.title-container {
+  display: flex;
+  align-items: center;
 }
