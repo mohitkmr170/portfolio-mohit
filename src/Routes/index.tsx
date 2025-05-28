@@ -1,6 +1,15 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router";
-import { Home, Projects, Contact, About, PageNotFound, Skills } from "../Pages";
+import {
+  Home,
+  Projects,
+  Contact,
+  About,
+  PageNotFound,
+  Skills,
+  Articles,
+} from "../Pages";
 import { TopNavBar } from "./topNavBar";
+import { Drawer } from "./Drawer";
 
 export function AppRoute() {
   const AppLayout = () => {
@@ -18,6 +27,7 @@ export function AppRoute() {
             <Route path="/about" element={<About />} />
             <Route path="*" element={<PageNotFound />} />
             <Route path="/skills" element={<Skills />} />
+            <Route path="/articles" element={<Articles />} />
           </Routes>
         </div>
       </>

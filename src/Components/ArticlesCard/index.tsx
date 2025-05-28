@@ -1,5 +1,10 @@
 import { ArrowRight, Calendar, TagIcon } from "lucide-react";
 import "./styles.css";
+import { noPreview } from "../../Assets";
+
+interface IProps {
+  project: any;
+}
 
 const tech_stacks = [
   "React",
@@ -10,29 +15,44 @@ const tech_stacks = [
   "Firebase",
 ];
 
-export function ArticlesCard() {
+export function ArticlesCard(props: IProps) {
   return (
-    <div className="project-card-container">
-      <div className="project-card-image">React Performance Optimization</div>
-      <div className="articles-card-details-container">
-        <div className="articles-time-and-tags-container">
-          <div className="articles-time-container">
-            <Calendar size={16} />
-            <div className="articles-time-text">May 12, 2025</div>
-          </div>
-          <div className="articles-time-container">
-            <TagIcon size={16} />
-            <div className="articles-time-text">React</div>
-          </div>
+    <div className="articles-card-details-container">
+      <div>
+        <div className="project-card-image">
+          {" "}
+          <img
+            src={props?.project?.thumbNail}
+            alt={noPreview}
+            className="project-image-logo"
+          />
         </div>
-        <h3>E-commerce Dashboard</h3>
-        <div className="project-card-details-text">
-          A responsive admin dashboard for an e-commerce platform with real-time
-          analytics, inventory management, and order processing.
-        </div>
-        <div className="project-card-external-link-container article-read-more-container">
-          <div className="read-more-text">Read More</div>
-          <ArrowRight />
+        <div className="articles-card-details-sub-container">
+          <div className="articles-time-and-tags-container">
+            <div className="articles-time-container">
+              <TagIcon size={16} />
+              <div className="articles-time-text">{props?.project?.type}</div>
+            </div>
+            <div className="articles-time-container">
+              <TagIcon size={16} />
+              <div className="articles-time-text">
+                {props?.project?.article ? "Article" : "Project"}
+              </div>
+            </div>
+          </div>
+          <h3>{props?.project?.description}</h3>
+          <div className="project-card-details-text">
+            {props?.project?.details}
+          </div>
+          <div
+            className="project-card-external-link-container article-read-more-container"
+            onClick={() =>
+              window.open(props?.project?.link, "_blank", "noopener,noreferrer")
+            }
+          >
+            <div className="read-more-text">View More</div>
+            <ArrowRight />
+          </div>
         </div>
       </div>
     </div>

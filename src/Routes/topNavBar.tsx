@@ -2,6 +2,8 @@ import { Bell, X, Menu } from "lucide-react";
 import "./styles.css";
 import { NavLink, useNavigate } from "react-router";
 import { personalLogo } from "../Assets";
+import { useState } from "react";
+import { Drawer } from "./Drawer";
 
 const navTabs = [
   { to: "/", name: "HOME" },
@@ -11,7 +13,13 @@ const navTabs = [
 ];
 
 export function TopNavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [bannerOpen, setBannerOpen] = useState(true);
   let navigate = useNavigate();
+
+  const toggleDrawer = () => {
+    setIsOpen(!isOpen);
+  };
 
   function notifincationBanner() {
     return (
@@ -50,15 +58,16 @@ export function TopNavBar() {
           })}
         </div>
         <div className="menu-icon-container">
-          <Menu />
+          <Menu onClick={toggleDrawer} />
         </div>
+        <Drawer isOpen={isOpen} toggleDrawer={toggleDrawer} />
       </div>
     );
   }
 
   return (
     <div className="navbar-container">
-      {notifincationBanner()}
+      {bannerOpen && notifincationBanner()}
       {tabContainer()}
     </div>
   );

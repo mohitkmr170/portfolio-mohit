@@ -1,5 +1,11 @@
 // import {} from "react";
 
+import { IntroSection } from "../Home/IntroSection";
+
 export function About() {
-  return <div>About Screen - Portfolio</div>;
+  return (
+    <div>
+      <IntroSection />
+    </div>
+  );
 }

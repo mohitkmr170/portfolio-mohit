@@ -1,8 +1,11 @@
 import { AutoHScrollList, ContactHandles } from "../../Components";
 import { personalImage } from "../../Assets";
 import { XP } from "../../Config";
+import { useLocation } from "react-router";
 
 export function IntroSection() {
+  const location = useLocation();
+
   function renderXp(item: any) {
     return (
       <div className="xp-item-container">
@@ -32,9 +35,11 @@ export function IntroSection() {
           <img src={personalImage} className="intro-image" alt="" />
         </div>
       </div>
-      <AutoHScrollList />
+      {location?.pathname === "/" && <AutoHScrollList />}
       <div className="about-container">
-        <h1 className="about-me-text">About Me</h1>
+        {location?.pathname === "/" && (
+          <h1 className="about-me-text">About Me</h1>
+        )}
         <div className="about-inner-container">
           <div className="xp-container">{XP.map(renderXp)}</div>
           <div className="whoiam-container">

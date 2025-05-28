@@ -63,6 +63,7 @@
 }
 .menu-icon-container {
   width: 15%;
+  cursor: pointer;
   text-align: end;
 }
 .tab-bar-name-text {
@@ -71,4 +72,51 @@
 .tab-bar-name-logo {
   height: 28px;
   border-radius: 14px;
+}
+.drawer_container {
+  height: 100vh;
+  width: 360px;
+  background-color: #111827;
+  box-shadow: "-2px 0 8px rgba(0,0,0,0.2)";
+  transform: translateX(100%);
+  transition: all 0.3s ease-in-out;
+  top: 60px;
+  right: 0;
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+.drawer_container.open {
+  transform: translateX(0);
+}
+.drawer-top-container {
+  padding: 22px 24px;
+  border-bottom-color: #ffffff;
+  border-bottom-width: 0.1px;
+  border-bottom-style: solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.drawer-middle-container {
+  padding: 24px;
+  flex: 1;
+}
+.drawer-bottom-container {
+  padding: 12px 24px;
+  margin-bottom: 84px;
+  border-top-color: #ffffff;
+  border-top-width: 0.1px;
+  border-top-style: solid;
+}
+.drawer-middle-container-links {
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.drawer-middle-container-text {
+  font-size: 16px;
+  margin-left: 8px;
 }

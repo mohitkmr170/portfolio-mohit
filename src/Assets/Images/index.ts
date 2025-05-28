@@ -14,6 +14,9 @@ const khataBook = require("./khataBook.png");
 const sprive = require("./sprive.png");
 const mpl = require("./mpl.png");
 const balance = require("./balance.png");
+const lighthouse = require("./lighthouse.png");
+const boilerplate = require("./boilerplate.png");
+const be = require("./be.png");
 
 export {
   personalLogo,
@@ -32,4 +35,7 @@ export {
   sprive,
   mpl,
   balance,
+  lighthouse,
+  boilerplate,
+  be,
 };

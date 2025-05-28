@@ -1,8 +1,14 @@
 .articles-card-details-container {
-  padding: 24px;
   background: #111827;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius: 8px;
+}
+.articles-card-details-sub-container {
+  height: 200px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* background-color: blue; */
 }
 .articles-time-and-tags-container {
   display: flex;
@@ -23,4 +29,12 @@
 }
 .article-read-more-container {
   cursor: pointer;
+  margin-top: auto;
+}
+.project-image-logo {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
