@@ -24,7 +24,7 @@ export function ArticlesCard(props: IProps) {
           <img
             src={props?.project?.thumbNail}
             alt={noPreview}
-            className="project-image-logo"
+            className="articles-image-logo"
           />
         </div>
         <div className="articles-card-details-sub-container">
