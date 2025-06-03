@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import { SkillsCard } from "../../Components";
+import SkillsCard from "../../Components/SkillsCard";
 import { SKILLS } from "../../Config";
 
 export function SkillsSection() {

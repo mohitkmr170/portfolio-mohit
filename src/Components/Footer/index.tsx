@@ -1,20 +1,21 @@
 import { Github, Hand, Linkedin, Mail, Phone } from "lucide-react";
 import { useNavigate } from "react-router";
+import "./styles.css";
 
-export function Footer() {
+const Footer = () => {
   let navigate = useNavigate();
 
   return (
     <div className="home-footer">
       <div className="home-footer-top-container">
         <div>
-          <div>Let's connect</div>
+          <div className="read-more-text">Let's connect</div>
           <div
             className="project-card-external-link-container article-read-more-container"
             onClick={() => navigate("Contact")}
           >
             <div className="read-more-text">Say hi!</div>
-            <Hand />
+            <Hand color="#ffffff" />
           </div>
         </div>
         <div>
@@ -55,4 +56,5 @@ export function Footer() {
       </div>
     </div>
   );
-}
+};
+export default Footer;

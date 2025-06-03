@@ -37,10 +37,6 @@
   margin: 6px 8px 6px 0;
   font-weight: 500;
 }
-.project-card-external-link-container {
-  margin-top: 12px;
-  display: flex;
-}
 .project-card-external-link {
   display: flex;
   margin-right: 12px;

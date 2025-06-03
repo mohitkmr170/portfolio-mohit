@@ -1,7 +1,7 @@
 import "./styles.css";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 
-export function ContactHandles() {
+const ContactHandles = () => {
   return (
     <div>
       <Phone
@@ -34,4 +34,6 @@ export function ContactHandles() {
       />
     </div>
   );
-}
+};
+
+export default ContactHandles;

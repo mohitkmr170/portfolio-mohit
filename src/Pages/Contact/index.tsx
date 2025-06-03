@@ -1,16 +1,14 @@
 import { useState } from "react";
 import "./styles.css";
-import { Footer } from "../../Components";
+import Footer from "../../Components/Footer";
 
-export function Contact() {
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
-
-  console.log(formData);
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
@@ -22,33 +20,47 @@ export function Contact() {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    console.log(formData, e);
-    const serviceId = "service_n8xr159"; // Your actual service ID
-    const templateId = "template_7aft2ee"; // Your actual template ID
-    const publicKey = "pztgAh3X9Vnd5N4qp"; // Your actual public key
+    if (
+      formData.name &&
+      formData.email &&
+      formData.subject &&
+      formData.message
+    ) {
+      const serviceId = "service_n8xr159"; // Your actual service ID
+      const templateId = "template_7aft2ee"; // Your actual template ID
+      const publicKey = "pztgAh3X9Vnd5N4qp"; // Your actual public key
 
-    const emailjs = await import("@emailjs/browser");
-    return emailjs.send(
-      serviceId,
-      templateId,
-      {
-        from_name: formData.name,
-        from_email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-        current_date: new Date().toLocaleDateString("en-US", {
-          weekday: "long",
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-          hour: "2-digit",
-          minute: "2-digit",
-        }),
-        website_url: window.location.origin, // Optional: your website URL
-        user_agent: navigator.userAgent.split(" ")[0], // Optional: browser info
-      },
-      publicKey
-    );
+      const emailjs = await import("@emailjs/browser");
+      emailjs
+        .send(
+          serviceId,
+          templateId,
+          {
+            from_name: formData.name,
+            from_email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+            current_date: new Date().toLocaleDateString("en-US", {
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+              hour: "2-digit",
+              minute: "2-digit",
+            }),
+            website_url: window.location.origin, // Optional: your website URL
+            user_agent: navigator.userAgent.split(" ")[0], // Optional: browser info
+          },
+          publicKey
+        )
+        .then(() => {
+          window.location.reload();
+          alert("Send successfully!");
+        })
+        .catch((err) => alert(err));
+    } else {
+      alert("All fields required!");
+    }
   };
 
   return (
@@ -116,4 +128,5 @@ export function Contact() {
       <Footer />
     </>
   );
-}
+};
+export default Contact;

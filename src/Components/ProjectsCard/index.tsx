@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
-import { OverlayModal } from "../OverlayModal";
+import OverlayModal from "../OverlayModal";
 import "./styles.css";
 import { noPreview } from "../../Assets";
 
-export function ProjectsCard(props: any) {
+const ProjectsCard = (props: any) => {
   const [isVisible, setIsVisible] = useState(false);
 
   console.log(isVisible);
@@ -35,6 +35,7 @@ export function ProjectsCard(props: any) {
             src={props?.project?.thumbNail}
             alt={noPreview}
             className="project-image-logo"
+            loading="lazy"
           />
           <h2>{props?.project?.projectName}</h2>
         </div>
@@ -82,6 +83,7 @@ export function ProjectsCard(props: any) {
             props?.project?.thumbNail ? props?.project?.thumbNail : noPreview
           }
           className="project-image"
+          loading="lazy"
         />
       </div>
       <div className="project-card-details-container">
@@ -119,4 +121,5 @@ export function ProjectsCard(props: any) {
       />
     </div>
   );
-}
+};
+export default ProjectsCard;

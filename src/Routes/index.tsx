@@ -1,15 +1,14 @@
+import React, { Suspense } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router";
-import {
-  Home,
-  Projects,
-  Contact,
-  About,
-  PageNotFound,
-  Skills,
-  Articles,
-} from "../Pages";
 import { TopNavBar } from "./topNavBar";
-import { Drawer } from "./Drawer";
+
+const Home = React.lazy(() => import("../Pages/Home"));
+const Projects = React.lazy(() => import("../Pages/Projects"));
+const Contact = React.lazy(() => import("../Pages/Contact"));
+const About = React.lazy(() => import("../Pages/About"));
+const PageNotFound = React.lazy(() => import("../Pages/404Page"));
+const Skills = React.lazy(() => import("../Pages/Skills"));
+const Articles = React.lazy(() => import("../Pages/Articles"));
 
 export function AppRoute() {
   const AppLayout = () => {
@@ -41,7 +40,9 @@ export function AppRoute() {
       API to manage * the application's navigation state and keep the UI in sync
       with the URL * in the browser's address bar.  */}
       <BrowserRouter>
-        <AppLayout />
+        <Suspense fallback={<div>Loading...</div>}>
+          <AppLayout />
+        </Suspense>
       </BrowserRouter>
     </>
   );

@@ -40,7 +40,7 @@ const skills = [
   },
 ];
 
-export function AutoHScrollList() {
+const AutoHScrollList = () => {
   function renderItems(item: any, index: any) {
     return (
       <div key={index} className="logo-item">
@@ -49,6 +49,7 @@ export function AutoHScrollList() {
           key={`${item?.name}`}
           className="skill-image"
           alt={`${item?.name}`}
+          loading="lazy"
         />
       </div>
     );
@@ -65,4 +66,5 @@ export function AutoHScrollList() {
       </div>
     </div>
   );
-}
+};
+export default AutoHScrollList;

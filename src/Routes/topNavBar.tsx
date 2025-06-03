@@ -39,6 +39,7 @@ export function TopNavBar() {
             src={personalLogo}
             alt={personalLogo}
             className="tab-bar-name-logo"
+            loading="lazy"
           />
           <div className="tab-bar-name-text">Mohit Kumar</div>
         </div>

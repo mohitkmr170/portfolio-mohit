@@ -1,7 +1,7 @@
 import { Check } from "lucide-react";
 import "./styles.css";
 
-export function SkillsCard(props: any) {
+const SkillsCard = (props: any) => {
   function renderCardItems(item: any) {
     return (
       <div className="card-items-container">
@@ -20,4 +20,5 @@ export function SkillsCard(props: any) {
       {props?.skills?.skills.map(renderCardItems)}
     </div>
   );
-}
+};
+export default SkillsCard;

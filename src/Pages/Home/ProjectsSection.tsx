@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from "react-router";
-import { ProjectsCard } from "../../Components";
+import ProjectsCard from "../../Components/ProjectsCard";
 import { PROJECTS } from "../../Config";
 import { useEffect, useState } from "react";
 

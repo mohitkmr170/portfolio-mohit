@@ -3,9 +3,9 @@ import { IntroSection } from "./IntroSection";
 import { SkillsSection } from "./SkillsSection";
 import { ProjectsSection } from "./ProjectsSection";
 import { ArticlesSection } from "./ArticlesSection";
-import { Footer } from "../../Components";
+import Footer from "../../Components/Footer";
 
-export function Home() {
+const Home = () => {
   return (
     <>
       <IntroSection />
@@ -15,4 +15,6 @@ export function Home() {
       <Footer />
     </>
   );
-}
+};
+
+export default Home;

@@ -1,4 +1,5 @@
-import { AutoHScrollList, ContactHandles } from "../../Components";
+import ContactHandles  from "../../Components/ContactHandles";
+import AutoHScrollList from "../../Components/AutoHScrollList";
 import { personalImage } from "../../Assets";
 import { XP } from "../../Config";
 import { useLocation } from "react-router";

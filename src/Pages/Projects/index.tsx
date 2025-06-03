@@ -1,9 +1,10 @@
 import { ProjectsSection } from "../Home/ProjectsSection";
 
-export function Projects() {
+const Projects = () => {
   return (
     <div>
       <ProjectsSection />
     </div>
   );
-}
+};
+export default Projects;

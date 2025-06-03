@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from "react-router";
-import { ArticlesCard } from "../../Components";
+import ArticlesCard from "../../Components/ArticlesCard";
 import { be, boilerplate, lighthouse } from "../../Assets";
 import { useEffect, useState } from "react";
 

@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, TagIcon } from "lucide-react";
+import { ArrowRight, TagIcon } from "lucide-react";
 import "./styles.css";
 import { noPreview } from "../../Assets";
 
@@ -6,16 +6,7 @@ interface IProps {
   project: any;
 }
 
-const tech_stacks = [
-  "React",
-  "Redux",
-  "Firebase",
-  "React",
-  "Redux",
-  "Firebase",
-];
-
-export function ArticlesCard(props: IProps) {
+const ArticlesCard = (props: IProps) => {
   return (
     <div className="articles-card-details-container">
       <div>
@@ -25,6 +16,7 @@ export function ArticlesCard(props: IProps) {
             src={props?.project?.thumbNail}
             alt={noPreview}
             className="articles-image-logo"
+            loading="lazy"
           />
         </div>
         <div className="articles-card-details-sub-container">
@@ -57,4 +49,5 @@ export function ArticlesCard(props: IProps) {
       </div>
     </div>
   );
-}
+};
+export default ArticlesCard;

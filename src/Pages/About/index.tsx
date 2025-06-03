@@ -2,10 +2,12 @@
 
 import { IntroSection } from "../Home/IntroSection";
 
-export function About() {
+const About = () => {
   return (
     <div>
       <IntroSection />
     </div>
   );
-}
+};
+
+export default About;

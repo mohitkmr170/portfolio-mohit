@@ -30,6 +30,7 @@
 .contact-input-label {
   font-size: 16px;
   margin-bottom: 12px;
+  color: #ffffff;
 }
 .contact-input-bottom-container {
   display: flex;
@@ -53,4 +54,5 @@
   text-align: center;
   margin-top: 32px;
   align-items: center;
+  cursor: pointer;
 }

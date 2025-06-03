@@ -63,7 +63,7 @@ const renderSkillsListItem = (item: any) => {
   );
 };
 
-export function Skills() {
+const Skills = () => {
   return (
     <div className="skills-screen-container">
       <h1 className="skills-screen-title">My Skills</h1>
@@ -78,4 +78,6 @@ export function Skills() {
       {SKILLS.map(renderSkillsListItem)}
     </div>
   );
-}
+};
+
+export default Skills;

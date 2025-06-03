@@ -1,9 +1,11 @@
 import { ArticlesSection } from "../Home/ArticlesSection";
 
-export function Articles() {
+const Articles = () => {
   return (
     <div>
       <ArticlesSection />
     </div>
   );
-}
+};
+
+export default Articles;

@@ -1,0 +1,50 @@
+.home-footer {
+  background: #111827;
+  padding: 5rem;
+}
+.home-footer-top-container {
+  display: flex;
+  justify-content: space-between;
+}
+.home-footer-bottom-container {
+  padding: 1rem;
+  text-align: center;
+  color: #ffffff;
+}
+.home-footer-top-left-text {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.project-card-external-link-container {
+  margin-top: 12px;
+  display: flex;
+}
+.article-read-more-container {
+  cursor: pointer;
+  margin-top: auto;
+}
+.read-more-text {
+  font-size: 16px;
+  margin-right: 8px;
+  color: #ffffff;
+}
+.phone-icon {
+  cursor: pointer;
+  color: #ffffff;
+}
+.mail-icon {
+  cursor: pointer;
+  margin-left: 12px;
+  color: #ffffff;
+}
+.github-icon {
+  cursor: pointer;
+  margin-left: 12px;
+  color: #ffffff;
+}
+.linkedin-icon {
+  cursor: pointer;
+  margin-left: 12px;
+  color: #ffffff;
+}

@@ -8,7 +8,7 @@ interface IProps {
   renderContent: () => JSX.Element;
 }
 
-export const OverlayModal: React.FC<IProps> = ({
+const OverlayModal: React.FC<IProps> = ({
   visible = false,
   onClose,
   renderContent,
@@ -34,3 +34,4 @@ export const OverlayModal: React.FC<IProps> = ({
     </div>
   );
 };
+export default OverlayModal;

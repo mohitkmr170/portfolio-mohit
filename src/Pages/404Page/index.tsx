@@ -1,5 +1,7 @@
 // import {} from "react";
 
-export function PageNotFound() {
+const PageNotFound = () => {
   return <div>PageNotFound Screen - Portfolio</div>;
-}
+};
+
+export default PageNotFound;
