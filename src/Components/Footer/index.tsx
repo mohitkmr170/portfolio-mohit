@@ -33,7 +33,7 @@ const Footer = () => {
             className="github-icon"
             onClick={() =>
               window.open(
-                "https://www.linkedin.com/in/mohitkmr170",
+                "https://github.com/mohitkmr170",
                 "_blank",
                 "noopener,noreferrer"
               )
@@ -43,7 +43,7 @@ const Footer = () => {
             className="linkedin-icon"
             onClick={() =>
               window.open(
-                "https://github.com/mohitkmr170",
+                "https://www.linkedin.com/in/mohitkmr170",
                 "_blank",
                 "noopener,noreferrer"
               )
